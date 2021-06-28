@@ -11,7 +11,10 @@ export default new VueRouter({
   routes:[
     {
       path:'/login',
-      component:Login
+      component:Login,
+      meta:{
+        title:'用户登录'
+      }
     },
     {
       path:'/main',
@@ -19,7 +22,11 @@ export default new VueRouter({
     },
     {
       path:'/list',
-      component:List
+      component:List,
+      meta:{
+        title:'水果管理',
+        requireAuth: true
+      }
     }
 
   ]
